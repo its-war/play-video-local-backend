@@ -7,8 +7,8 @@ module.exports = async (req, res) => {
         try {
             const nomeArquivo = matchedData(req).nomeArquivo;
             const novoNome = matchedData(req).novoNome + path.extname(nomeArquivo);
-            const caminhoCompleto = path.join('public/animes', nomeArquivo);
-            const novoCaminhoCompleto = path.join('public/animes', novoNome);
+            const caminhoCompleto = path.join(`public/${process.env.DIRETORIO_VIDEOS}`, nomeArquivo);
+            const novoCaminhoCompleto = path.join(`public/${process.env.DIRETORIO_VIDEOS}`, novoNome);
 
             if(fs.existsSync(caminhoCompleto)){
                 fs.rename(caminhoCompleto, novoCaminhoCompleto, (err) => {

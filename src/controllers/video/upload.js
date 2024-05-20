@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
             return res.status(400).send({upload: false});
         }
 
-        const destino = 'public/animes';
+        const destino = `public/${process.env.DIRETORIO_VIDEOS}`;
 
         req.files.forEach((file) => {
             const caminhoCompleto = path.join(destino, file.originalname);

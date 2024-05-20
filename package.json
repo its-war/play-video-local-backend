@@ -1,7 +1,7 @@
 {
   "name": "play-anime-local-backend",
   "version": "1.0.0",
-  "description": "Este projeto tem como objetivo criar um server local para hospedar animes, para que eu possa assistir sem a necessidade de hospeda-los no Google Drive.",
+  "description": "Este projeto tem como objetivo criar um server local para hospedar animes, filmes, vídeos, para que eu possa assistir sem a necessidade de hospeda-los no Google Drive.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

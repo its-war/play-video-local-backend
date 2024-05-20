@@ -6,7 +6,7 @@ module.exports = async (req, res) => {
     if (result.isEmpty()) {
         let arquivo = matchedData(req).arquivo;
         try {
-            const caminho = path.join('public/animes', arquivo);
+            const caminho = path.join(`public/${process.env.DIRETORIO_VIDEOS}`, arquivo);
             if(fs.existsSync(caminho)){
                 fs.unlinkSync(caminho);
                 return res.send({apagar: true});

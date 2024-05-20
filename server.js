@@ -42,7 +42,7 @@ app.get("/", function(req, res){
 
 app.get('*', (req, res) => {
     res.sendFile(__dirname + '/public/index.html');
-})
+});
 
 server.listen(porta, () => {
     if(process.env.MODE === 'development'){
@@ -50,3 +50,9 @@ server.listen(porta, () => {
     }
     console.log("Servidor iniciado na porta " + porta + " em " + datahora.getData() + " às " + datahora.getHora());
 });
+
+const fs = require('fs');
+if(!fs.existsSync(`public/${process.env.DIRETORIO_VIDEOS}`)){
+    fs.mkdirSync(`public/${process.env.DIRETORIO_VIDEOS}`);
+    console.log('Diretório criado.');
+}

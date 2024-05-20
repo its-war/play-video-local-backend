@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 module.exports = async (req, res) => {
     try {
-        const pasta = 'public/animes';
+        const pasta = `public/${process.env.DIRETORIO_VIDEOS}`;
         const ext = 'video/mp4';
 
         const videos = [];
