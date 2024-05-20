@@ -85,24 +85,24 @@ Você pode ajustar o conteúdo conforme necessário, especialmente a seção de 
 
 A estrutura básica do projeto é a seguinte:
 
-play-videos-local-backend/
-├── node_modules/
-├── .env
-├── .gitignore
-├── package.json
-├── package-lock.json
-├── README.md
-├── server.js
-├── public/
-|   ├── videos/
-|   ├── assets/
-|   ├── img/
-|   └── index.html
-└── src/
-    ├── controllers/
-    ├── model/
-    ├── plugins/
-    └── router/
+play-videos-local-backend/ <br>
+├── node_modules/ <br>
+├── .env <br>
+├── .gitignore <br>
+├── package.json <br>
+├── package-lock.json <br>
+├── README.md <br>
+├── server.js <br>
+├── public/ <br>
+|   ├── videos/ <br>
+|   ├── assets/ <br>
+|   ├── img/ <br>
+|   └── index.html <br>
+└── src/ <br>
+    ├── controllers/ <br>
+    ├── model/ <br>
+    ├── plugins/ <br>
+    └── router/ <br>
 
 * `node_modules/`: Diretório onde as dependências são instaladas.
 * `.env`: Arquivo para variáveis de ambiente.
