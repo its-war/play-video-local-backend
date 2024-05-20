@@ -1,0 +1,30 @@
+{
+  "name": "play-anime-local-backend",
+  "version": "1.0.0",
+  "description": "Este projeto tem como objetivo criar um server local para hospedar animes, para que eu possa assistir sem a necessidade de hospeda-los no Google Drive.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node-dev server.js"
+  },
+  "keywords": [
+    "player",
+    "anime",
+    "assistir",
+    "hd"
+  ],
+  "author": "Karlos Warney",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^7.0.1",
+    "mime": "^2.4.4",
+    "multer": "^1.4.5-lts.1",
+    "node-dev": "^8.0.0",
+    "sharp": "^0.33.2"
+  }
+}
