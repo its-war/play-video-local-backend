@@ -1,6 +1,6 @@
 # Play Vídeos Local
 
-Este projeto tem como objetivo criar um servidor local para hospedar animes, filmes, vídeos, para que você possa assistir sem a necessidade de hospedá-los no Google Drive.
+Este projeto Node.js permite que você crie um servidor local para hospedar seus animes, filmes e vídeos favoritos. Com ele, você pode assistir a tudo isso sem precisar armazená-los no Google Drive ou em outros serviços de streaming.
 
 ## Índice
 
