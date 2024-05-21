@@ -8,19 +8,28 @@ module.exports = async (req, res) => {
 
         const videos = [];
 
-        fs.readdir(pasta, (err, arquivos) => {
+        fs.readdir(pasta, async (err, arquivos) => {
             if(err){
                 console.error('Erro ao listar arquivos');
                 return res.send({arquivos: []});
             }
 
-            arquivos.forEach((arquivo) => {
+            for(const arquivo of arquivos){
                 const caminhoCompleto = path.join(pasta, arquivo);
 
                 if(mime.getType(caminhoCompleto) === ext){
-                    videos.push(arquivo);
+                    try{
+                        const stats = await fs.promises.stat(caminhoCompleto);
+                        videos.push({
+                            name: arquivo,
+                            size: stats.size,
+                            lastModified: stats.mtime.toISOString().slice(0, 10)
+                        });
+                    }catch (e) {
+                        console.error(e);
+                    }
                 }
-            });
+            }
 
             return res.send({arquivos: videos});
         });
